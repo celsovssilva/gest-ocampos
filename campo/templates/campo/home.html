@@ -1,0 +1,29 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}Página Inicial - Agendamento{% endblock %}
+
+{% block header_title %}Bem-vindo!{% endblock %}
+
+{% block content %}
+    <h2 class="section-title">{{ titulo }}</h2>
+    <p>{{ mensagem }}</p>
+
+    <div class="card">
+        <h3>Sobre o Sistema</h3>
+        <p>Este sistema permite que gestores de campos society gerenciem seus campos, horários e agendamentos. Usuários podem facilmente encontrar e reservar horários disponíveis.</p>
+        <p><strong>Recursos para o Gestor:</strong></p>
+        <ul>
+            <li>Visualizar agendamentos.</li>
+            <li>Cadastrar e gerenciar campos.</li>
+            <li>Definir dias e horários de funcionamento.</li>
+            <li>Ver usuários cadastrados.</li>
+        </ul>
+        <p><strong>Recursos para o Usuário:</strong></p>
+        <ul>
+            <li>Agendar horários em campos disponíveis.</li>
+            <li>Visualizar seus próprios agendamentos.</li>
+        </ul>
+        <p>Comece a explorar clicando nos links acima ou acessando o <a href="{% url 'manager_dashboard' %}">Painel do Gestor</a>.</p>
+    </div>
+{% endblock content %}

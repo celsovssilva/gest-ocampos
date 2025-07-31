@@ -1,0 +1,42 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Sistema de Agendamento{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'campo/css/base.css' %}"> 
+    {% block extra_head %}{% endblock %} 
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>{% block header_title %}Sistema de Agendamento{% endblock %}</h1>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home' %}">Início</a></li>
+                    <li><a href="{% url 'manager_dashboard' %}">Painel do Gestor</a></li>
+                   
+                    {% if user.is_authenticated %}
+                        <li>Olá, {{ user.username }}!</li>
+                        <li><a href="{% url 'admin:logout' %}">Sair</a></li> 
+                    {% else %}
+                        <li><a href="{% url 'admin:login' %}">Login</a></li> 
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-content">
+        {% block content %}
+        
+        {% endblock %}
+    </div>
+
+ 
+    {% block extra_body %}{% endblock %} 
+</body>
+</html>
