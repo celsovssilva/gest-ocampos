@@ -21,4 +21,7 @@ from . import views
 urlpatterns = [
     path('', views.home, name='home'),
     path('gestor/painel/', views.manager_dashboard, name='manager_dashboard'),
+    path('register/', views.register, name='register'),
+    path('paginagestor/', views.paginagestor, name='gestor'),  
+    path('login/', views.login, name='login'),  
 ]

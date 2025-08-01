@@ -1,29 +1,48 @@
 {% extends '../base.html' %}
-{% load static %}
-
-{% block title %}Página Inicial - Agendamento{% endblock %}
-
-{% block header_title %}Bem-vindo!{% endblock %}
 
 {% block content %}
-    <h2 class="section-title">{{ titulo }}</h2>
-    <p>{{ mensagem }}</p>
+<div class="jumbotron text-center bg-light p-5 rounded-3 mb-5">
+    <h1 class="display-4">Bem-vindo à Gestão de Campos Society</h1>
+    <p class="lead">A plataforma completa para gestores e apaixonados por futebol!</p>
+    <hr class="my-4">
+    <p>Agende seu campo favorito ou gerencie seu negócio com facilidade e eficiência.</p>
+   
+</div>
 
-    <div class="card">
-        <h3>Sobre o Sistema</h3>
-        <p>Este sistema permite que gestores de campos society gerenciem seus campos, horários e agendamentos. Usuários podem facilmente encontrar e reservar horários disponíveis.</p>
-        <p><strong>Recursos para o Gestor:</strong></p>
-        <ul>
-            <li>Visualizar agendamentos.</li>
-            <li>Cadastrar e gerenciar campos.</li>
-            <li>Definir dias e horários de funcionamento.</li>
-            <li>Ver usuários cadastrados.</li>
-        </ul>
-        <p><strong>Recursos para o Usuário:</strong></p>
-        <ul>
-            <li>Agendar horários em campos disponíveis.</li>
-            <li>Visualizar seus próprios agendamentos.</li>
-        </ul>
-        <p>Comece a explorar clicando nos links acima ou acessando o <a href="{% url 'manager_dashboard' %}">Painel do Gestor</a>.</p>
+<div class="row text-center">
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Para Gestores</h5>
+                <p class="card-text">
+                    Gerencie seus campos, defina horários, acompanhe agendamentos e tenha total controle do seu negócio em uma única plataforma.
+                </p>
+                <a href="#" class="btn btn-outline-primary mt-3">Saber Mais</a>
+            </div>
+        </div>
     </div>
-{% endblock content %}
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Para Jogadores</h5>
+                <p class="card-text">
+                    Encontre os melhores campos society perto de você, verifique a disponibilidade de horários e agende sua partida em segundos.
+                </p>
+                <a href="#" class="btn btn-outline-success mt-3">Agendar Campo</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <div class="card text-center bg-light mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Pronto para começar?</h5>
+                <p class="card-text">Crie sua conta agora e junte-se à nossa comunidade!</p>
+                <a href="register/" class="btn btn-warning me-2">Criar Conta</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

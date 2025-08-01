@@ -1,0 +1,77 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}Painel do Gestor{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 text-center mb-5">
+        <h1 class="display-4">Painel de Gestão</h1>
+        <p class="lead">Olá, {{ user.username }}. Gerencie seus campos e agendamentos.</p>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-md-4">
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Campos Cadastrados</h5>
+                <p class="card-text fs-2">3</p> </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Agendamentos Hoje</h5>
+                <p class="card-text fs-2">12</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-info mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Usuários Registrados</h5>
+                <p class="card-text fs-2">25</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="card-header">Gerenciar Campos</div>
+            <div class="card-body">
+                <h5 class="card-title">Cadastrar/Visualizar Campos</h5>
+                <p class="card-text">Adicione novos campos, edite informações existentes ou remova-os.</p>
+                <a href="#" class="btn btn-primary">Cadastrar Novo Campo</a>
+                <a href="#" class="btn btn-outline-secondary">Ver Todos</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="card-header">Gerenciar Horários</div>
+            <div class="card-body">
+                <h5 class="card-title">Definir Disponibilidade</h5>
+                <p class="card-text">Configure os dias e horários em que seus campos estão disponíveis para agendamento.</p>
+                <a href="#" class="btn btn-success">Configurar Horários</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <div class="card">
+            <div class="card-header">Usuários do Sistema</div>
+            <div class="card-body">
+                <h5 class="card-title">Visualizar Clientes</h5>
+                <p class="card-text">Lista de todos os usuários cadastrados. Você pode gerenciar suas informações.</p>
+                <a href="#" class="btn btn-info">Ver Usuários</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
