@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Usuário - Campos Disponíveis</title>
+    <link rel="stylesheet" href="{% static 'campo/css/style.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Campos Esportivos Disponíveis</h1>
+
+        <div class="campo-card">
+            <h2>Campo de Futebol Society A</h2>
+            <p><strong>Endereço:</strong> Rua das Flores, 123 - Centro</p>
+            <p>Um campo moderno com grama sintética de alta qualidade e iluminação para jogos noturnos.</p>
+
+            <h3>Horários Disponíveis</h3>
+            <ul class="horarios-list">
+                <li>
+                    <span>08/08/2025 - 10:00 às 11:00</span>
+                    <a href="#" class="agendar-btn">Agendar</a>
+                </li>
+                <li>
+                    <span>08/08/2025 - 14:00 às 15:00</span>
+                    <a href="#" class="agendar-btn">Agendar</a>
+                </li>
+                <li>
+                    <span>09/08/2025 - 19:00 às 20:00</span>
+                    <a href="#" class="agendar-btn">Agendar</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="campo-card">
+            <h2>Quadra de Vôlei de Praia</h2>
+            <p><strong>Endereço:</strong> Avenida do Sol, s/n - Orla</p>
+            <p>Quadra de areia fofa, perfeita para vôlei e beach tennis. Muito disputada nos fins de semana.</p>
+
+            <h3>Horários Disponíveis</h3>
+            <p class="sem-horarios">Não há horários disponíveis para agendamento no momento.</p>
+        </div>
+
+        <div class="campo-card">
+            <h2>Quadra Poliesportiva C</h2>
+            <p><strong>Endereço:</strong> Praça da Harmonia, 45 - Bairro Jardim</p>
+            <p>Quadra coberta ideal para futsal e basquete.</p>
+
+            <h3>Horários Disponíveis</h3>
+            <p class="sem-horarios">Não há horários disponíveis para agendamento no momento.</p>
+        </div>
+
+        <a href="#" class="voltar-link">Voltar para a página inicial</a>
+    </div>
+
+</body>
+</html>
