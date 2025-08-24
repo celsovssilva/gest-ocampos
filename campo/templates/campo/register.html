@@ -25,13 +25,21 @@
                         <label for="id_password2" class="form-label">Confirme a Senha</label>
                         <input type="password" class="form-control" id="id_password2" name="password_confirm" required>
                     </div>
+                    
+                    <div class="mb-3">
+                        <label for="id_role" class="form-label">Tipo de Conta</label>
+                        <select class="form-control" id="id_role" name="role" required>
+                            <option value="usuario">Usuário</option>
+                            <option value="gestor">Gestor</option>
+                        </select>
+                    </div>
                     <div class="d-grid gap-2 mt-4">
                         <button type="submit" class="btn btn-primary btn-lg">Cadastrar</button>
                     </div>
                 </form>
             </div>
             <div class="card-footer text-center">
-                <p class="mb-0">Já tem uma conta? <a href="login/">Faça Login</a></p>
+                <p class="mb-0">Já tem uma conta? <a href="{% url 'login' %}">Faça Login</a></p>
             </div>
         </div>
     </div>

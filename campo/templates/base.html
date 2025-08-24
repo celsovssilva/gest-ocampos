@@ -21,9 +21,9 @@
                    
                     {% if user.is_authenticated %}
                         <li>Olá, {{ user.username }}!</li>
-                        <li><a href="{% url 'admin:logout' %}">Sair</a></li> 
+                        <li><a href="{% url 'login' %}">Sair</a></li> 
                     {% else %}
-                        <li><a href="{% url 'register' %}">Login</a></li> 
+                        <li><a href="{% url 'login' %}">Login</a></li> 
                     {% endif %}
                 </ul>
             </nav>

@@ -5,36 +5,43 @@
 
 {% block content %}
 <div class="row justify-content-center mt-5">
-    <div class="col-md-6">
-        <div class="card shadow-lg">
-            <div class="card-body p-5">
-                <h2 class="card-title text-center mb-4">Acessar sua Conta</h2>
-                <form method="post">
-                    {% csrf_token %}
-                    <div class="mb-3">
-                        <label for="id_username" class="form-label">Nome de Usuário</label>
-                        <input type="text" class="form-control" id="id_username" name="username" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="id_password" class="form-label">Senha</label>
-                        <input type="password" class="form-control" id="id_password" name="password" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="id_user_type" class="form-label">Tipo de Acesso</label>
-                        <select class="form-select" id="id_user_type" name="user_type" required>
-                            <option value="user">Usuário</option>
-                            <option value="manager">Gestor</option>
-                        </select>
-                    </div>
-                    <div class="d-grid gap-2 mt-4">
-                        <button type="submit" class="btn btn-success btn-lg">Entrar</button>
-                    </div>
-                </form>
-            </div>
-            <div class="card-footer text-center">
-                <p class="mb-0">Ainda não tem uma conta? <a href="{% url 'register' %}">Cadastre-se</a></p>
-            </div>
-        </div>
-    </div>
+    <div class="col-md-6">
+        <div class="card shadow-lg">
+            <div class="card-body p-5">
+                <h2 class="card-title text-center mb-4">Acessar sua Conta</h2>
+                <form method="post">
+                    {% csrf_token %}
+
+                    {% if error %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ error }}
+                    </div>
+                    {% endif %}
+
+                    <div class="mb-3">
+                        <label for="id_username" class="form-label">Nome de Usuário</label>
+                        <input type="text" class="form-control" id="id_username" name="username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="id_password" class="form-label">Senha</label>
+                        <input type="password" class="form-control" id="id_password" name="password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="id_user_type" class="form-label">Tipo de Acesso</label>
+                        <select class="form-select" id="id_user_type" name="user_type" required>
+                            <option value="user">Usuário</option>
+                            <option value="manager">Gestor</option>
+                        </select>
+                    </div>
+                    <div class="d-grid gap-2 mt-4">
+                        <button type="submit" class="btn btn-success btn-lg">Entrar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer text-center">
+                <p class="mb-0">Ainda não tem uma conta? <a href="{% url 'register' %}">Cadastre-se</a></p>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
